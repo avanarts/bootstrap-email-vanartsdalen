@@ -1,0 +1,50 @@
+.compose-btn {
+    background-color: darkslategray;
+    border: none;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+}
+
+.compose-btn:hover {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.nav-bar {
+    background-color: darkslategray;
+}
+
+.active-item {
+    background-color: rgba(10, 82, 50, 0.349);
+}
+
+#search-input {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+.search-btn {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+}
+
+.subject {
+    font-size: 16pt;
+}
+
+.msg-text {
+    font-size: 10pt;
+}
+
+.list-group-item:hover {
+    border: 1px solid green;
+    background-color: rgba(10, 82, 50, 0.10) ;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.50);
+    padding-left: 15px;
+    font-weight: 100;
+}
