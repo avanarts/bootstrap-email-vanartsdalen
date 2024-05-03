@@ -28,32 +28,32 @@
                 <button type="button" class="btn btn-lg btn-primary compose-btn mb-3">Compose</button>
                     <div class="col-sm-12">
                         <ul class="menu-items list-group">
-                            <li class="active-item list-group-item"><i class="bi bi-inbox mr-2"></i>Inbox<span class="badge badge-pill badge-dark ml-3">897</span></li>
-                            <li class="secondary list-group-item"><i class="bi bi-send-check mr-2"></i>Sent</li>
-                            <li class="secondary list-group-item"><i class="bi bi-exclamation-diamond mr-2"></i>Spam</li>
-                            <li class="secondary list-group-item"><i class="bi bi-trash mr-2"></i>Trash</li>
+                            <li class="active-item list-group-item folder-active"><i class="bi bi-inbox mr-2"></i>Inbox<span class="badge badge-pill badge-dark ml-3">897</span></li>
+                            <li class="secondary list-group-item folder-active"><i class="bi bi-send-check mr-2"></i>Sent</li>
+                            <li class="secondary list-group-item folder-active"><i class="bi bi-exclamation-diamond mr-2"></i>Spam</li>
+                            <li class="secondary list-group-item folder-active"><i class="bi bi-trash mr-2"></i>Trash</li>
                         </ul>
                     </div>
             </div>
             <div class="col-12 col-sm">
                 <div class="inbox-messages mt-2">
-                    <div class="list-group-item">
+                    <div class="list-group-item js-active">
                         <p class="subject">Hello</p>
                         <p class="msg-text">Please write me back</p>
                     </div>
-                    <div class="list-group-item active-item">
+                    <div class="list-group-item active-item js-active">
                         <p class="subject">Message Header</p>
                         <p class="msg-text">Lorem ipsum dolor</p>
                     </div>
-                    <div class="list-group-item">
+                    <div class="list-group-item js-active">
                         <p class="subject">Password</p>
                         <p class="msg-text">Remember to change your password</p>
                     </div>
-                    <div class="list-group-item">
+                    <div class="list-group-item js-active">
                         <p class="subject">Class Reunion</p>
                         <p class="msg-text">Are you going to be able to make it</p>
                     </div>
-                    <div class="list-group-item">
+                    <div class="list-group-item js-active">
                         <p class="subject">Reminder</p>
                         <p class="msg-text">Your appointment is at 2pm</p>
                     </div>
@@ -75,6 +75,9 @@
 
                 </p>
                 <div class="row">
+                    <textarea class="form-control mb-3" rows="8">Start Typing Here</textarea>
+                </div>
+                <div class="row">
                     <div class="col">
                         <button class="btn btn-outline-dark"><i class="bi bi-reply mr-2"></i>Reply</button>
                         <button class="btn btn-outline-dark"><i class="bi bi-forward mr-2"></i>Forward</button>
@@ -87,3 +90,26 @@
     
 </body>
 </html>
+<script>
+
+    const messagesList = document.querySelectorAll(".js-active");
+    messagesList.forEach(message => {
+        message.addEventListener('click', () => {
+            messagesList.forEach(div => {
+                div.classList.remove("active-item")
+            });
+            message.classList.add("active-item")
+        });
+    });
+
+    const foldersList = document.querySelectorAll(".folder-active")
+    foldersList.forEach(box => {
+        box.addEventListener('click', () => {
+            foldersList.forEach(div => {
+                div.classList.remove("active-item")
+            });
+            box.classList.add("active-item")
+        });
+    });
+
+</script>
