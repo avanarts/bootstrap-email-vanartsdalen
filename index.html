@@ -12,21 +12,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container-fluid nav-bar"><!--perhaps this should be a col-->
+    <div class="container-fluid nav-bar">
         <div class="row justify-content-end pt-1 pb-1">
-            <div class="col-auto">
-            <input type="text" id="search-input" placeholder="Search">
+            <div class="col-auto search-input">
+                <input type="text" id="search-input" placeholder="Search"/>
+                <button class="search-btn btn-sm" type="submit"><i class="bi bi-search"></i></button>
             </div>
-            <div class="col-auto">
-            <button class="search-btn" type="submit">Search</button>
-            </div>
+
         </div>
     </div>
     <div class="container-fluid">
         <div class="row col-xs mt-3 text-start">
-            <div class="text-center d-none d-md-block">
-                <button type="button" class="btn btn-lg btn-primary compose-btn mb-3">Compose</button>
-                    <div class="col-sm-12">
+            <div class="text-center col-md-12 col-lg">
+                    <div class="col">
+                        <button type="button" class="btn btn-lg btn-primary compose-btn my-1">Compose</button>
+                    </div>
+                    <div class="col-sm-12 d-none d-lg-block">
                         <ul class="menu-items list-group">
                             <li class="active-item list-group-item folder-active"><i class="bi bi-inbox mr-2"></i>Inbox<span class="badge badge-pill badge-dark ml-3">897</span></li>
                             <li class="secondary list-group-item folder-active"><i class="bi bi-send-check mr-2"></i>Sent</li>
@@ -35,7 +36,7 @@
                         </ul>
                     </div>
             </div>
-            <div class="col-12 col-sm">
+            <div class="col-sm">
                 <div class="inbox-messages mt-2">
                     <div class="list-group-item js-active">
                         <p class="subject">Hello</p>
@@ -60,7 +61,7 @@
                     <div class="btn list-group-item text-muted">Load More</div>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-7 d-none d-md-block"> <!--col-md-7 d-none d-md-block-->
+            <div class="col-sm-12 col-lg-7 d-none d-md-block">
                 <div id="msg-header">
                     from: test@test.com
                     <br>
@@ -75,13 +76,13 @@
 
                 </p>
                 <div class="row">
-                    <textarea class="form-control mb-3" rows="8">Start Typing Here</textarea>
+                    <textarea class="form-control mb-3 mx-2" rows="8">Start Typing Here</textarea>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <button class="btn btn-outline-dark"><i class="bi bi-reply mr-2"></i>Reply</button>
-                        <button class="btn btn-outline-dark"><i class="bi bi-forward mr-2"></i>Forward</button>
-                        <button class="btn btn-outline-dark"><i class="bi bi-trash mr-2"></i>Delete</button>
+                    <div class="col mb-3">
+                        <button class="btn btn-outline-dark msg-buttons"><i class="bi bi-reply mr-2"></i>Reply</button>
+                        <button class="btn btn-outline-dark msg-buttons"><i class="bi bi-forward mr-2"></i>Forward</button>
+                        <button class="btn btn-outline-dark msg-buttons"><i class="bi bi-trash mr-2"></i>Delete</button>
                     </div>
                 </div>
             </div>

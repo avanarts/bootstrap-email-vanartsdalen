@@ -16,3 +16,6 @@
 
 5/1/24
     - changed some columns
+
+5/2/24
+    - added event listeners so that you could change which item in the messages list and the folders list is active
