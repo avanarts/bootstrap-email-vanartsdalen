@@ -19,3 +19,8 @@
 
 5/2/24
     - added event listeners so that you could change which item in the messages list and the folders list is active
+
+6/4/24
+    - changed to Bootstrap v5.3
+    - added offcanvas
+    - edited badges and some components
